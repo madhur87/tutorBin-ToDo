@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require('dotenv')
 const PORT = 3000 || process.env.PORT;
 const routesAuth = require('./routes/auth');
+const routesTask = require('./routes/task');
 const mongoDB = require('./helpers/dbConnection');
 
 //Call ENV File
@@ -15,7 +16,8 @@ mongoDB();
 app.use(express.json());
 
 //Call Routes
-app.use('/api', routesAuth)
+app.use('/api', routesAuth);
+app.use('/api', routesTask);
 
 //Create Server
 app.listen(PORT, (err) => {
@@ -23,4 +25,4 @@ app.listen(PORT, (err) => {
         throw new Error(err);
     }
     console.log(`PORT is running on ${PORT}`);
-})
+});

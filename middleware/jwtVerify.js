@@ -6,7 +6,7 @@ const verifyJWT = async (req, res, next) => {
         let authorization = req.headers.authorization;
 
         if (authorization) {
-            authorization = authorization.replace("Bearer", "");
+            authorization = authorization.replace("Bearer ", "");
 
             //Decode JWT to get Information
             const body = await jwt.verify(authorization, process.env.Token_CRED);

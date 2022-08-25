@@ -22,6 +22,8 @@ const userSchemaCollection = new mongoose.Schema({
         type: String,
         required: true
     }
+}, {
+    timestamps: true
 });
 
-module.exports = mongoose.model('User', userSchemaCollection);
+module.exports = mongoose.model('Users', userSchemaCollection);
