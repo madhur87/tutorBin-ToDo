@@ -4,7 +4,11 @@
   "description": "ToDo List",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "^14",
+    "npm": "^6.14.4"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,6 @@
     "joi-objectid": "^4.0.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.3"
-  }
+  },
+  "devDependencies": {}
 }
