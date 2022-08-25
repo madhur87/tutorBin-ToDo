@@ -10,7 +10,7 @@ const signUpValidation = async (req, res, next) => {
             password: Joi.string().min(5).required().label('Password too short')
         });
 
-        userSignUpPayload.validateAsync(req.body)
+        await userSignUpPayload.validateAsync(req.body)
         next();
     } catch (err) {
         res.status(400).json({message: err.message});

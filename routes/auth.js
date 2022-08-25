@@ -1,10 +1,9 @@
 const routes = require('express').Router();
 const signIn = require('../controllers/signIn');
-const { signInValidation } = require('../middleware/userValidation');
-//const signUp = require('../controllers/signUp');
-const verifyJWT = require('../middleware/jwtVerify');
+const { signInValidation, signUpValidation } = require('../middleware/userValidation');
+const signUp = require('../controllers/signUp');
 
-routes.post('/signIn', verifyJWT, signInValidation, signIn);
-//routes.post('/signIn',signUp);
+routes.post('/signIn', signInValidation, signIn);
+routes.post('/signUp', signUpValidation, signUp);
 
 module.exports = routes;

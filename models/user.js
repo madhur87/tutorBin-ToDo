@@ -5,11 +5,13 @@ const userSchemaCollection = new mongoose.Schema({
     userName: {
         type: String,
         required: true,
-        min: 5
+        min: 5,
+        unique: true
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
