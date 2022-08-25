@@ -7,7 +7,7 @@ module.exports = async (user) => {
             email: user.email,
             _id: user._id,
             userName: user.userName
-        }, process.env.Token_CRED);
+        }, process.env.Token_CRED, { expiresIn: '2h' });
 
         return token;
     } catch (err) {

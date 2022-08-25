@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "74b5f76e-5fd2-4d0b-8e72-b0b9a17eec84",
+		"name": "tutorBin Asg",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10593756"
+	},
+	"item": [
+		{
+			"name": "signUp User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"testID@test.com\",\r\n    \"password\": \"1234467\",\r\n    \"userName\": \"testUser\",\r\n    \"name\": \"Test Data\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"testID@test.com\",\r\n    \"password\": \"1234467\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RJREB0ZXN0LmNvbSIsIl9pZCI6IjYzMDc1YWVkOWNjNzc2ZTk0MjJjNmU3MCIsInVzZXJOYW1lIjoidGVzdFVzZXIiLCJpYXQiOjE2NjE0Mjc2NjJ9.IsJwtXeK97-I9AFsVpsSL9r48pJPhzErnhkGTgL02X0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"Task 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RJREB0ZXN0LmNvbSIsIl9pZCI6IjYzMDc1YWVkOWNjNzc2ZTk0MjJjNmU3MCIsInVzZXJOYW1lIjoidGVzdFVzZXIiLCJpYXQiOjE2NjE0Mjc2NjJ9.IsJwtXeK97-I9AFsVpsSL9r48pJPhzErnhkGTgL02X0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RJREB0ZXN0LmNvbSIsIl9pZCI6IjYzMDc1YWVkOWNjNzc2ZTk0MjJjNmU3MCIsInVzZXJOYW1lIjoidGVzdFVzZXIiLCJpYXQiOjE2NjE0Mjc2NjJ9.IsJwtXeK97-I9AFsVpsSL9r48pJPhzErnhkGTgL02X0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/task/6307657f21bdfbc87f404d38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						"6307657f21bdfbc87f404d38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RJREB0ZXN0LmNvbSIsIl9pZCI6IjYzMDc1YWVkOWNjNzc2ZTk0MjJjNmU3MCIsInVzZXJOYW1lIjoidGVzdFVzZXIiLCJpYXQiOjE2NjE0Mjc2NjJ9.IsJwtXeK97-I9AFsVpsSL9r48pJPhzErnhkGTgL02X0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Task 2\",\r\n    \"completed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/task/6307669bc0e283623b75ee63",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						"6307669bc0e283623b75ee63"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
